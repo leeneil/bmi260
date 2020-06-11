@@ -1,0 +1,21 @@
+ CUDNN_HALF=1 
+net.optimized_memory = 0 
+mini_batch = 1, batch = 16, time_steps = 1, train = 0 
+
+ seen 64, trained: 512 K-images (8 Kilo-batches_64) 
+
+ calculation mAP (mean average precision)...
+
+ detections_count = 76, unique_truth_count = 100  
+ rank = 0 of ranks = 76 class_id = 0, name = tumor, ap = 31.81%   	 (TP = 24, FP = 9) 
+
+ for conf_thresh = 0.25, precision = 0.73, recall = 0.24, F1-score = 0.36 
+ for conf_thresh = 0.25, TP = 24, FP = 9, FN = 76, average IoU = 50.59 % 
+
+ IoU threshold = 50 %, used Area-Under-Curve for each unique Recall 
+ mean average precision (mAP@0.50) = 0.318145, or 31.81 % 
+
+Set -points flag:
+ `-points 101` for MS COCO 
+ `-points 11` for PascalVOC 2007 (uncomment `difficult` in voc.data) 
+ `-points 0` (AUC) for ImageNet, PascalVOC 2010-2012, your custom dataset
